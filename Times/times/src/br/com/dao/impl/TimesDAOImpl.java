@@ -10,8 +10,8 @@ import br.com.model.Times;
 
 public class TimesDAOImpl extends DAOImpl<Times, Integer> implements ITimesDAO {
 
-	public TimesDAOImpl(EntityManager em) {
-		super(em);
+	public TimesDAOImpl() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

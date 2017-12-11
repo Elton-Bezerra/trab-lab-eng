@@ -14,9 +14,8 @@
 <%@include file="pgs/topo.jsp"%>
 
 <%
-	EntityManager em = FactorySingleton.getInstance().createEntityManager();
-	IElencoDAO edao = new ElencoDAOImpl(em);
-	ITimesDAO tdao = new TimesDAOImpl(em);
+	IElencoDAO edao = new ElencoDAOImpl();
+	ITimesDAO tdao = new TimesDAOImpl();
 	List<Times> listaTimes = tdao.listarTodos();
 %>
 <div class="content">

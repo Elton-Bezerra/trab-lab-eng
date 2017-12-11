@@ -11,8 +11,8 @@ import br.com.model.Elenco;
 
 public class ElencoDAOImpl extends DAOImpl<Elenco, Integer> implements IElencoDAO {
 
-	public ElencoDAOImpl(EntityManager em) {
-		super(em);
+	public ElencoDAOImpl() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 

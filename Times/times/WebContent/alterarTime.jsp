@@ -9,8 +9,7 @@
 <%@include file="pgs/topo.jsp"%>
 
 <%
-	EntityManager em = FactorySingleton.getInstance().createEntityManager();
-	ITimesDAO tdao = new TimesDAOImpl(em);
+	ITimesDAO tdao = new TimesDAOImpl();
 	List<Times> lista = tdao.listarTodos();
 	Times t = (Times) request.getAttribute("time");
 	System.out.println(t.getNome());

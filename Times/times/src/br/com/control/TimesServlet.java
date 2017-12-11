@@ -22,8 +22,7 @@ import br.com.singleton.FactorySingleton;
 @WebServlet("/timesServlet")
 public class TimesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	EntityManager em = FactorySingleton.getInstance().createEntityManager();
-	ITimesDAO tdao = new TimesDAOImpl(em);
+	ITimesDAO tdao = new TimesDAOImpl();
 
 	public TimesServlet() {
 		super();

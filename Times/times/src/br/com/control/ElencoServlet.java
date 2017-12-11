@@ -25,9 +25,8 @@ import br.com.singleton.FactorySingleton;
 @WebServlet("/elencoServlet")
 public class ElencoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	EntityManager em = FactorySingleton.getInstance().createEntityManager();
-	IElencoDAO edao = new ElencoDAOImpl(em);
-	ITimesDAO tdao = new TimesDAOImpl(em);
+	IElencoDAO edao = new ElencoDAOImpl();
+	ITimesDAO tdao = new TimesDAOImpl();
 
 	public ElencoServlet() {
 		super();

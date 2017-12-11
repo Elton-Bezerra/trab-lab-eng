@@ -13,7 +13,7 @@ public class DAOImpl<T,K> implements DAO<T,K> {
 
     @SuppressWarnings("unchecked")
     public DAOImpl(EntityManager em) {
-        this.em = em;
+        em = FactorySingleton.getInstance().createEntityManager();
         classe = (Class<T>) ((ParameterizedType) getClass()
                 .getGenericSuperclass())
                 .getActualTypeArguments()[0];
